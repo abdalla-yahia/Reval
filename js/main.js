@@ -194,3 +194,18 @@ btn_default.addEventListener('click', () => {
     window.localStorage.removeItem('whit-color')
     window.location.reload()
 })
+
+//Add social Media Share Button
+
+let facebookBtn =document.querySelector(".facebook-share")
+let twitterBtn =document.querySelector(".twitter-share")
+let likedinBtn = document.querySelector(".linkedin-share")
+
+function init() {
+    let postTitle = "Hello ";
+    let postUrl = document.location.href
+    facebookBtn.href = `https://www.facebook.com/sharer.php?u=${postUrl}`
+    twitterBtn.href = `https://twitter.com/share?url=${postUrl}&text=${postTitle}&via=[via]&hashtags=[hashtags]`
+    likedinBtn.href = `https://www.linkedin.com/shareArticle?url=${postUrl}&title=${postUrl}`
+}
+init()

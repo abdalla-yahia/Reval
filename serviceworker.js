@@ -4,7 +4,7 @@ const assets =
     "/",
     "/index.html",
     "/css/Elzero.css",
-    "/css/all.min.css",
+    // "/css/all.min.css",
     "/css/normalize.css",
     "/js/main.js",
     "/app.js",

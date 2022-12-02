@@ -696,6 +696,43 @@ i {
     -webkit-animation: rotate 1s infinite linear
     }
 }
+/* Start social share */
+.social-share {
+    width: 55px ;
+    height: 250px;
+    position: fixed;
+    z-index: 99999;
+    top: 250px;
+    left: 0;
+}
+.social-share ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.social-share ul li {
+background-color: #c5c5c5;
+width: 100%;
+height: 30%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.social-share ul li i {
+    color: #0a599b;
+    font-size: 35px;
+}
+.social-share ul li:nth-child(2) i {
+    color: #2196f3;
+}
+.social-share ul li:last-child i {
+    color:  #0a66c2;
+}
+
+/* End social share */
 .container .landing-text {
     padding: 150px auto
 }
@@ -1611,7 +1648,7 @@ i {
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr))
 }
 .latest-events .container img {
-    max-width: 80%
+    max-width: 100%
 }
 .latest-events .img-1.one {
     position: absolute;

@@ -69,6 +69,9 @@ html {
 a {
     text-decoration: none
 }
+.h {
+    color: black;
+}
 p {
     line-height: 2;
     letter-spacing: 1px;
@@ -112,13 +115,15 @@ ul {
     .main-title {
         max-width: 200px
     }
-    .main-title h2 {
+    .main-title .h2 {
         font-size: 20px
     }
 }
-.main-title h2 {
+.main-title .h2 {
     padding: 10px 8px;
     border: 2px solid black;
+    font-size: 26px;
+    font-weight: 700;
     text-transform: uppercase;
     position: relative;
     z-index: 99;
@@ -129,7 +134,7 @@ ul {
     -ms-transition: var(--second-transation);
     -o-transition: var(--second-transation)
 }
-.main-title h2::before {
+.main-title .h2::before {
     content: '';
     position: absolute;
     left: -15%;
@@ -154,7 +159,7 @@ ul {
     -o-transition: var(--second-transation);
     z-index: -1
 }
-.main-title h2::after {
+.main-title .h2::after {
     content: '';
     position: absolute;
     right: -15%;
@@ -179,11 +184,11 @@ ul {
     -o-transition: var(--second-transation);
     z-index: -1
 }
-.main-title h2:hover {
+.main-title .h2:hover {
     color: var(--whit-color);
     border-color: var(--whit-color)
 }
-.main-title h2:hover::after {
+.main-title .h2:hover::after {
     right: 0;
     width: 50%;
     height: 100%;
@@ -193,7 +198,7 @@ ul {
     -ms-border-radius: 0%;
     -o-border-radius: 0%
 }
-.main-title h2:hover::before {
+.main-title .h2:hover::before {
     left: 0;
     width: 50%;
     height: 100%;
@@ -865,7 +870,12 @@ align-items: center;
 }
 .articles-text .h3,
 p {
-    padding-bottom: 15px
+    padding-bottom: 15px;
+}
+.articles-text .h3 {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--main-color);
 }
 .articles-text p {
     max-width: 80%
@@ -1030,10 +1040,12 @@ i {
     height: auto;
     z-index: 999
 }
-.features-text h1 {
+.features-text .h2 {
     border-bottom: 4px solid #f44036;
     max-width: 50%;
     margin: 15px auto;
+    font-size: 25px;
+    font-weight: 700;
     padding-bottom: 10px
 }
 .features-text p {
@@ -1107,7 +1119,7 @@ i {
 .features-card.col-2 a::before {
     background-color: #00776b
 }
-.features-card.col-2 .features-text h1,
+.features-card.col-2 .features-text .h2,
 .features-card.col-2 .features-text a {
     border-color: #1e7b73
 }
@@ -1120,7 +1132,7 @@ i {
 .features-card.col-3 a::before {
     background-color: #0396da
 }
-.features-card.col-3 .features-text h1,
+.features-card.col-3 .features-text .h2,
 .features-card.col-3 .features-text a {
     border-color: #13698f
 }
@@ -1718,7 +1730,7 @@ i {
 .dayes-box:hover span:last-child {
     border-color: var(--main-color)
 }
-.events-box h2 {
+.events-box .h2 {
     font-size: 30px;
     margin: 15px 0
 }
@@ -2125,7 +2137,7 @@ i {
     opacity: .9
 }
 .awesome .container,
-.awesome h2 {
+.awesome .h2 {
     position: relative;
     z-index: 1
 }
@@ -2136,8 +2148,9 @@ i {
     margin: 50px auto;
     max-width: 300px
 }
-.awesome .title h2 {
+.awesome .title .h2 {
     text-align: center;
+    font-weight: 700;
     font-size: 40px
 }
 .awsome-box {
@@ -2257,7 +2270,7 @@ i {
     flex-direction: column;
     align-items: center
 }
-.picture .discount-text h2 {
+.picture .discount-text .h2 {
     color: var(--whit-color);
     font-size: 35px;
     padding-top: 20px
@@ -2270,7 +2283,7 @@ i {
     line-height: 1.5;
     padding-top: 30px
 }
-.form-discount h2 {
+.form-discount .h2 {
     font-size: 40px;
     text-align: center
 }
@@ -2335,16 +2348,17 @@ footer .container {
     text-align: start;
     max-width: 95%
 }
-.footer-social h2 {
+.footer-social .h2 {
     font-size: 50px;
+    font-weight: 700;
     color: var(--main-color)
 }
 .footer-social p {
     max-width: 95%;
     color: var(--f4f4-color)
 }
-.footer-social h2:hover {
-    color: var(--main-color)
+.footer-social .h2:hover {
+    color: var(--main-color-alt)
 }
 .footer-social ul {
     display: flex

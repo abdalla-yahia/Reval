@@ -699,11 +699,18 @@ i {
 .container .landing-text {
     padding: 150px auto
 }
-.container .landing-text h1 {
+.container .landing-text h1
+ {
+    font-size: 42px;
+    font-weight: 700;
+    margin-right: 5px;
+    display: inline-flex
+}
+.container .landing-text span {
     font-size: 42px;
     font-weight: 700
 }
-.container .landing-text h1 span {
+.container .landing-text h1 {
     color: var(--main-color)
 }
 .container .landing-text p {

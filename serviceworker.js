@@ -60,8 +60,12 @@ const assets =
     "/imgs/work-steps-3.png.webp",
     "/imgs/work-steps.png.webp",
 
-    "/images/icons/icon-192x192.png",
-    "/images/icons/icon-384x384.png",
+    "/images/icons/android-chrome-192x192.png",
+    "/images/icons/android-chrome-512x512.png",
+    "/images/icons/apple-touch-icon.png",
+    "/images/icons/favicon-16x16.png",
+    "/images/icons/favicon-32x32.png",
+    "/images/icons/favicon.ico",
 
     
     "/webfonts/fa-brands-400.eot",

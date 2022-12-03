@@ -1,13 +1,2 @@
 
-User-agent: googlebot
-Disallow: /
-
-User-agent: * 
-Disallow: /directory 1
-Disallow:/ directory 2
-
-User-agent: *
-Disallow: /*.jpg$
-
-
-Sitemap:  https://abdalla-yahia.github.io/Reval/sitemap.xml
+Sitemap:https://abdalla-yahia.github.io/Reval/sitemap.xml

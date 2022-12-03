@@ -3,37 +3,43 @@
 <!--  created with sitemap generator https://octopus.do  -->
 
     <url>
-        <loc>https://abdalla-yahia.github.io/Reval//index.html</loc>
+        <loc>https://abdalla-yahia.github.io/Reval/</loc>
         <lastmod>2022-12-03</lastmod>
         <changefreq>always</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://abdalla-yahia.github.io/Reval//index.html</loc>
+        <loc>https://abdalla-yahia.github.io/Reval/index.html</loc>
         <lastmod>2022-12-03</lastmod>
         <changefreq>always</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://abdalla-yahia.github.io/Reval//index.html</loc>
+        <loc>https://abdalla-yahia.github.io/Reval/imgs/awesome-video.mp4</loc>
         <lastmod>2022-12-03</lastmod>
         <changefreq>always</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://abdalla-yahia.github.io/Reval//index.html</loc>
+        <loc>https://abdalla-yahia.github.io/Reval/css/Elzero.css</loc>
         <lastmod>2022-12-03</lastmod>
         <changefreq>always</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://abdalla-yahia.github.io/Reval//cookies</loc>
+        <loc>https://abdalla-yahia.github.io/Reval/js/main.js</loc>
         <lastmod>2022-12-03</lastmod>
         <changefreq>always</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://abdalla-yahia.github.io/Reval//404-error</loc>
+        <loc>https://abdalla-yahia.github.io/Reval/cookies</loc>
+        <lastmod>2022-12-03</lastmod>
+        <changefreq>always</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://abdalla-yahia.github.io/Reval/404-error</loc>
         <lastmod>2022-12-03</lastmod>
         <changefreq>always</changefreq>
         <priority>0.5</priority>

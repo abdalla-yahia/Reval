@@ -4,5 +4,4 @@ Allow: /
 User-agent: *
 Disallow: /
 
-
 Sitemap: https://abdalla-yahia.github.io/Reval/sitemap.xml

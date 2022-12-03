@@ -54,6 +54,7 @@ const assets =
     "/imgs/team-07.jpg.webp",
     "/imgs/team-08.jpg.webp",
     "/imgs/video-preview.jpg.webp",
+    "/imgs/awesome-video.mp4",
 
     "/imgs/work-steps-1.png.webp",
     "/imgs/work-steps-2.png.webp",

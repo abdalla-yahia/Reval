@@ -60,7 +60,6 @@ let netSeconds = Seconds - 59
 let awesome = document.getElementById('awesome')
 window.addEventListener('scroll', () => {
     if (window.scrollY >= awesome.offsetTop - 200) {
-        console.log(awesome.offsetTop);
 let awesome_box = document.querySelectorAll('.awesome-count')
 setTimeout(() => {
 setInterval(() => {
@@ -123,6 +122,7 @@ dark_mode.addEventListener('click', () => {
     window.localStorage.removeItem('section-color')
     window.localStorage.removeItem('whit-color')
 })
+/*
 //Show Videos
 let list_videos = document.querySelectorAll('.list-of-videos li a');
 let ifram_video = document.querySelector('.video-preview iframe');
@@ -136,6 +136,7 @@ list_videos.forEach(e => {
 random_video.addEventListener('click', () => {
     ifram_video.src = list_videos[Math.floor(Math.random() * list_videos.length)].dataset.src;
 })
+*/
 //Show Setting Bar
 let sid_bar = document.getElementById('setting')
 let sit_btn = document.getElementById('sitt_btn');

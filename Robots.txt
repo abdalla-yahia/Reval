@@ -1,8 +1,8 @@
 User-agent: Googlebot
-Disallow: /nogooglebot/
+Allow: /
 
 User-agent: *
-Allow: /
+Disallow: /
 
 
 Sitemap:https://abdalla-yahia.github.io/Reval/sitemap.xml

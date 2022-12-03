@@ -1,0 +1,27 @@
+#Prevent GoogleBot from scanning. (this is a comment. You can write what you want)
+
+User-agent: googlebot
+Disallow: /
+
+If you want instead to exclude more than a directory for all crawlers:
+
+User-agent: * 
+Disallow: /directory 1
+Disallow:/ directory 2
+
+(the asterisk means “all”)
+Or maybe exclude all directories but one to a specific crawler:
+
+User-agent: specific-crawler
+Allow: /directory1 User-agent: * Allow: /
+
+In this way, you’re stating that every other crawler can access to the entire website.
+
+Finally, we can prevent the scanning of a specific file format, for example, jpg images.
+
+User-agent: *
+Disallow: /*.jpg$
+
+The $ character establish a rule valid for all strings that end with .jpg.
+
+Sitemap:  https://abdalla-yahia.github.io/Reval/sitemap.xml

@@ -3,11 +3,11 @@ const assets =
     [
     "/",
     "/index.html",
-    "/css/Elzero.css",
-    // "/css/all.min.css",
+    "/css/Reval.css",
     "/css/normalize.css",
     "/js/main.js",
     "/app.js",
+
     "/imgs/avatar-01.png.webp",
     "/imgs/avatar-02.png.webp",
     "/imgs/avatar-03.png.webp",
@@ -68,20 +68,6 @@ const assets =
     "/images/icons/favicon-32x32.png",
     "/images/icons/favicon.ico",
 
-    
-    "/webfonts/fa-brands-400.eot",
-
-    "/webfonts/fa-brands-400.ttf",
-    "/webfonts/fa-brands-400.woff",
-    "/webfonts/fa-brands-400.woff2",
-    "/webfonts/fa-regular-400.eot",
-
-    "/webfonts/fa-regular-400.ttf",
-    "/webfonts/fa-regular-400.woff",
-    "/webfonts/fa-regular-400.woff2",
-
-    "/webfonts/fa-solid-900.woff",
-    "/webfonts/fa-solid-900.woff2",
 ]
 
 

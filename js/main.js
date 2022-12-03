@@ -76,14 +76,22 @@ setInterval(() => {
     }
 })
 let scroll_button = document.querySelector(".scroll-button");
-let go_down = document.querySelector('.go-down')
+let go_down = document.querySelector('.go-down');
+let social_box = document.querySelector(".social-share");
 window.addEventListener('scroll', () => {
-if (window.scrollY <= go_down.offsetTop) {
-    scroll_button.style.display ="none"
-} else {
-    scroll_button.style.display ="block"
-}
+        social_box.style.display = "block";
+    if (window.scrollY <= go_down.offsetTop) {
+        scroll_button.style.display ="none"
+    } else {
+        scroll_button.style.display ="block"
+    }
+    console.log(social_box.style.opacity);
 })
+document.onmouseover = () => {
+    setTimeout(() => {
+        social_box.style.display = "none";
+    },10000)
+}
 scroll_button.addEventListener('click', () => {
     window.scrollTo({
         top: 0,

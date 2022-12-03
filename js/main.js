@@ -85,7 +85,6 @@ window.addEventListener('scroll', () => {
     } else {
         scroll_button.style.display ="block"
     }
-    console.log(social_box.style.opacity);
 })
 document.onmouseover = () => {
     setTimeout(() => {

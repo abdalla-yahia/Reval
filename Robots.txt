@@ -5,4 +5,4 @@ User-agent: *
 Disallow: /
 
 
-Sitemap:https://abdalla-yahia.github.io/Reval/sitemap.xml
+Sitemap: https://abdalla-yahia.github.io/Reval/sitemap.xml

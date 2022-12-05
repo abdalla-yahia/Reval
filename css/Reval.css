@@ -863,7 +863,12 @@ i {
     margin-right: 5px;
     display: inline-flex
 }
-
+@media (max-width:767px) {
+    .container .landing-text h1 {
+        font-size: 27px;
+    font-weight: 600;
+    }
+}
 .container .landing-text span {
     font-size: 42px;
     font-weight: 700

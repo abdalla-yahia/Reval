@@ -4,4 +4,4 @@ Allow: /
 User-agent: *
 Disallow: /
 
-Sitemap: https://abdalla-yahia.github.io/Reval/sitemap.xml
+Sitemap: https://reval22.netlify.app/sitemap.xml

@@ -455,7 +455,11 @@ i {
 .other-links .container ul li a {
     margin-left: 20px
 }
-
+@media (max-width:815px) {
+        .other-links .container>img {
+        display: none
+    }
+}
 @media (max-width:767px) {
     header nav {
         max-width: 100%
@@ -468,10 +472,6 @@ i {
     header nav ul li {
         padding: 10px;
         margin: 20px 0
-    }
-
-    .other-links .container>img {
-        display: none
     }
 
     .other-links .container {

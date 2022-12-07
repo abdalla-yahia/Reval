@@ -132,18 +132,18 @@ ul {
 
 @media (max-width:400px) {
     .main-title {
-        max-width: 200px
+        max-width: 240px
     }
 
     .main-title .h2 {
-        font-size: 20px
+        font-size: 18px
     }
 }
 
 .main-title .h2 {
     padding: 10px 8px;
     border: 2px solid black;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 700;
     text-transform: uppercase;
     position: relative;
@@ -374,9 +374,10 @@ nav ul li:hover::before {
 }
 
 .other-links .container img.other-img {
-    max-width: 40%;
-    animation: move calc(var(--third-transation) * 2)infinite linear alternate;
-    -webkit-animation: move calc(var(--third-transation) * 2)infinite linear alternate
+    max-width: 33%;
+    max-height: 50%;
+    animation: move calc(var(--third-transation) * 4)infinite linear alternate;
+    -webkit-animation: move calc(var(--third-transation) * 4)infinite linear alternate;
 }
 
 @keyframes move {
@@ -385,8 +386,8 @@ nav ul li:hover::before {
         -webkit-transform: translateY(-30px);
         -moz-transform: translateY(-30px);
         -ms-transform: translateY(-30px);
-        -o-transform: translateY(-30px)
-    }
+        -o-transform: translateY(-30px);
+}
 }
 
 @keyframes move2 {
@@ -395,20 +396,21 @@ nav ul li:hover::before {
         -webkit-transform: translateY(30px);
         -moz-transform: translateY(30px);
         -ms-transform: translateY(30px);
-        -o-transform: translateY(30px)
-    }
+        -o-transform: translateY(30px);
+}
 
     to {
         transform: translateY(0px);
         -webkit-transform: translateY(0px);
         -moz-transform: translateY(0px);
         -ms-transform: translateY(0px);
-        -o-transform: translateY(0px)
-    }
+        -o-transform: translateY(0px);
+}
 }
 
 .other-links .container ul {
-    max-width: 95%
+    max-width: 95%;
+
 }
 
 .other-links .container ul li {
@@ -629,7 +631,7 @@ i {
     -webkit-border-radius: 45px;
     -moz-border-radius: 45px;
     -ms-border-radius: 45px;
-    -o-border-radius: 45px
+    -o-border-radius: 45px;
 }
 
 .dark-mode i {
@@ -854,7 +856,8 @@ i {
 
 /* End social share */
 .container .landing-text {
-    padding: 150px auto
+    padding: 150px auto;
+    text-align: center;
 }
 
 .container .landing-text h1 {
@@ -888,8 +891,8 @@ i {
 
 .landing-page .container img {
     max-width: 100%;
-    animation: move calc(var(--third-transation) * 3) linear infinite alternate;
-    -webkit-animation: move calc(var(--third-transation) * 3) linear infinite alternate
+    animation: move calc(var(--third-transation) * 5) linear infinite alternate;
+    -webkit-animation: move calc(var(--third-transation) * 5) linear infinite alternate;
 }
 
 @media (max-width:992px) {
@@ -945,40 +948,40 @@ i {
         -webkit-transform: translateY(0px);
         -moz-transform: translateY(0px);
         -ms-transform: translateY(0px);
-        -o-transform: translateY(0px)
-    }
+        -o-transform: translateY(0px);
+}
 
     20% {
         transform: translateY(20px);
         -webkit-transform: translateY(20px);
         -moz-transform: translateY(20px);
         -ms-transform: translateY(20px);
-        -o-transform: translateY(20px)
-    }
+        -o-transform: translateY(20px);
+}
 
     40% {
         transform: translateY(0px);
         -webkit-transform: translateY(0px);
         -moz-transform: translateY(0px);
         -ms-transform: translateY(0px);
-        -o-transform: translateY(0px)
-    }
+        -o-transform: translateY(0px);
+}
 
     60% {
         transform: translateY(20px);
         -webkit-transform: translateY(20px);
         -moz-transform: translateY(20px);
         -ms-transform: translateY(20px);
-        -o-transform: translateY(20px)
-    }
+        -o-transform: translateY(20px);
+}
 
     100% {
         transform: translateY(20px);
         -webkit-transform: translateY(20px);
         -moz-transform: translateY(20px);
         -ms-transform: translateY(20px);
-        -o-transform: translateY(20px)
-    }
+        -o-transform: translateY(20px);
+}
 }
 
 /*##############################################################

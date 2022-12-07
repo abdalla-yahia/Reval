@@ -1,4 +1,4 @@
-window.location = "https://abdalla-yahia.github.io/Reval/"
+window.location = "https://reval22.netlify.app/"
 
 let links = document.getElementsByTagName('li')
 let other_Links = document.querySelector('.other-links')

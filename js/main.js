@@ -1,3 +1,5 @@
+window.location = "https://abdalla-yahia.github.io/Reval/"
+
 let links = document.getElementsByTagName('li')
 let other_Links = document.querySelector('.other-links')
 links[3].addEventListener('mouseenter', () => {
@@ -217,3 +219,4 @@ function init() {
     likedinBtn.href = `https://www.linkedin.com/shareArticle?url=${postUrl}&title=${postUrl}`
 }
 init()
+

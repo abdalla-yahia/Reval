@@ -104,42 +104,53 @@ let span_dark_mode = document.querySelector('.sp-dark');
 if (window.localStorage.getItem('them')) {
     document.documentElement.setAttribute('data-them', window.localStorage.getItem('them'))
     if (window.localStorage.getItem('them') === "dark") {
-        span_dark_mode.classList.add("fa-moon")
+        span_dark_mode.classList.add("fa-moon");
     } else {
-        span_dark_mode.classList.add("fa-sun")
+        span_dark_mode.classList.add("fa-sun");
     }
 }
 document.documentElement.getAttribute('data-them') === "dark" ? span_dark_mode.classList.add("dark") : "";
+let main_color = document.getElementById("in1");
+let section_color = document.getElementById("in2");
+let text_color = document.getElementById("in3");
+let body_color = document.getElementById("in4");
+
+if (window.localStorage.getItem('them') === "dark") {
+    main_color.value = "#ffffff";
+    section_color.value = "#302e2e";
+    text_color.value = "#d1d1d1";
+    body_color.value = "#444444";
+}
+
 dark_mode.addEventListener('click', () => {
-    dark_mode.classList.toggle('active')
-    span_dark_mode.classList.toggle('dark')
+    dark_mode.classList.toggle('active');
+    span_dark_mode.classList.toggle('dark');
     let switched = document.documentElement.getAttribute('data-them');
-    let setAtt =  switched === "light" ? "dark" : "light";
-    document.documentElement.setAttribute("data-them", setAtt)
-    window.localStorage.setItem('them', setAtt)
-    span_dark_mode.classList.contains('fa-sun') ? span_dark_mode.className = ('fas fa-moon sp-dark dark') : span_dark_mode.className=('fas fa-sun sp-dark')
-    window.localStorage.removeItem('main-color')
-    window.localStorage.removeItem('text-color')
-    window.localStorage.removeItem('section-color')
-    window.localStorage.removeItem('whit-color')
-})
-/*
-//Show Videos
-let list_videos = document.querySelectorAll('.list-of-videos li a');
-let ifram_video = document.querySelector('.video-preview iframe');
-let random_video = document.querySelector('.fa-random');
-list_videos.forEach(e => {
-    e.addEventListener('click', () => {
-        ifram_video.src = e.dataset.src
-    })
-})
-//Show Random Videos
-random_video.addEventListener('click', () => {
-    ifram_video.src = list_videos[Math.floor(Math.random() * list_videos.length)].dataset.src;
-})
-*/
+    let setAtt = switched === "light" ? "dark" : "light";
+    document.documentElement.setAttribute("data-them", setAtt);
+    window.localStorage.setItem('them', setAtt);
+    span_dark_mode.classList.contains('fa-sun') ? span_dark_mode.className = ('fas fa-moon sp-dark dark') : span_dark_mode.className = ('fas fa-sun sp-dark')
+    window.localStorage.removeItem('main-color');
+    window.localStorage.removeItem('text-color');
+    window.localStorage.removeItem('section-color');
+    window.localStorage.removeItem('whit-color');
+    if (window.localStorage.getItem('them') === "dark") {
+    main_color.value = "#ffffff";
+    section_color.value = "#302e2e";
+    text_color.value = "#d1d1d1";
+    body_color.value = "#444444";
+    } else {
+            main_color.value = "#2196f3";
+            section_color.value = "#ececec";
+            text_color.value = "#000000";
+            body_color.value = "#ffffff";
+}
+
+});
+
+
 //Show Setting Bar
-let sid_bar = document.getElementById('setting')
+let sid_bar = document.getElementById('setting');
 let sit_btn = document.getElementById('sitt_btn');
 sit_btn.addEventListener('click', () => {
     if (sid_bar.style.left === "0px") {

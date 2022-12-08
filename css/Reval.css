@@ -881,10 +881,10 @@ i {
     color: var(--main-color)
 }
 
-.container .landing-text p {
-    font-size: 22px;
-    font-weight: 400;
-    color: var(--p777-color);
+.container .landing-text .h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: black;
     letter-spacing: 1px;
     line-height: 2
 }
@@ -1992,9 +1992,11 @@ i {
 }
 
 .events-box .h2 {
-    font-size: 30px;
-    margin: 15px 0
+    font-size: 40px;
+    margin: 15px 0;
+    color: var(--main-color);
 }
+
 
 .events-box .next-year {
     color: var(--main-color);

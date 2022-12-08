@@ -229,4 +229,3 @@ function init() {
     likedinBtn.href = `https://www.linkedin.com/shareArticle?url=${postUrl}&title=${postUrl}`
 }
 init()
-

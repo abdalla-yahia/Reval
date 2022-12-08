@@ -1,3 +1,3 @@
 RewriteEngine On
-RewriteCond %{HTTP_HOST} !^www.reval22.netlify.app$
-RewriteRule ^(.*)$ http://www.reval22.netlify.app/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} !^reval22.netlify.app$
+RewriteRule ^(.*)$ https://reval22.netlify.app/$1 [R=301,L]

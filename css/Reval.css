@@ -824,7 +824,9 @@ i {
     display: flex;
     justify-content: center;
     align-items: center;
-
+}
+.social-share ul li a {
+    color:#c5c5c5
 }
 
 .social-share ul li:hover i{
@@ -2721,7 +2723,9 @@ footer .container {
     margin: 10px 10px 10px 0;
     background-color: rgba(175, 175, 175, 0.363)
 }
-
+.footer-social ul li a {
+    color: transparent;
+}
 .footer-social ul li:first-child:hover {
     background-color: #0a599b
 }

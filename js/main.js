@@ -277,7 +277,6 @@ window.addEventListener("scroll",() => {
     let scrolTop = document.documentElement.scrollTop;
     //Scroll Progress Header
     page_progres_scroll.style.width = `${((scrolTop / height) * 100)}%`;
-    console.log(`${((scrolTop / height ) * 100)}%`);
 	sections.forEach((e) => {
 		if (window.scrollY >= e.offsetTop - 150) {
 			sections.forEach((ele) => ele.classList.remove("active-section"));

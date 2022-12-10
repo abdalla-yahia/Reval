@@ -34,8 +34,8 @@ const assets =
     "/imgs/features-03.jpg.webp",
     "/imgs/gallery-01.png.webp",
     "/imgs/gallery-02.png.webp",
-    "/imgs/gallery-03.jpg.webp",
-    "/imgs/gallery-04.png.webp",
+    "/imgs/gallery-03.png.webp",
+    "/imgs/gallery-04.jpg.webp",
     "/imgs/gallery-05.jpg.webp",
     "/imgs/gallery-06.png.webp",
     "/imgs/hosting-advanced.png.webp",
@@ -53,8 +53,6 @@ const assets =
     "/imgs/team-06.png.webp",
     "/imgs/team-07.jpg.webp",
     "/imgs/team-08.jpg.webp",
-    "/imgs/video-preview.jpg.webp",
-    "/imgs/awesome-video.mp4",
 
     "/imgs/work-steps-1.png.webp",
     "/imgs/work-steps-2.png.webp",
@@ -75,7 +73,6 @@ self.addEventListener("install", installEvent => {
   installEvent.waitUntil(
     caches.open(staticAbdallaYahia).then(async (cache) => {
     let ok
-    console.log('ServiceWorker: Caching files:', assets.length, assets);
     try {
       ok = await cache.addAll(assets);
     } catch (err) {

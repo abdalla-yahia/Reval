@@ -126,6 +126,7 @@ if (window.localStorage.getItem("them") === "dark") {
 	section_color.value = "#302e2e";
 	text_color.value = "#d1d1d1";
 	body_color.value = "#444444";
+	Alt_color.value = "#ffffd1";
 }
 
 dark_mode.addEventListener("click", () => {

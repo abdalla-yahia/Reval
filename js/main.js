@@ -119,6 +119,7 @@ let main_color = document.getElementById("in1");
 let section_color = document.getElementById("in2");
 let text_color = document.getElementById("in3");
 let body_color = document.getElementById("in4");
+let Alt_color = document.getElementById("in5");
 
 if (window.localStorage.getItem("them") === "dark") {
 	main_color.value = "#ffffff";
@@ -141,16 +142,19 @@ dark_mode.addEventListener("click", () => {
 	window.localStorage.removeItem("text-color");
 	window.localStorage.removeItem("section-color");
 	window.localStorage.removeItem("whit-color");
+	window.localStorage.removeItem("Alt-color");
 	if (window.localStorage.getItem("them") === "dark") {
 		main_color.value = "#ffffff";
 		section_color.value = "#302e2e";
 		text_color.value = "#d1d1d1";
 		body_color.value = "#444444";
+		Alt_color.value = "#ffffd1";
 	} else {
 		main_color.value = "#2196f3";
 		section_color.value = "#ececec";
 		text_color.value = "#000000";
 		body_color.value = "#ffffff";
+		Alt_color.value = "#006ec5";
 	}
 });
 
@@ -227,6 +231,18 @@ inp[3].addEventListener("change", () => {
 	document.documentElement.style.setProperty("--whit-color", inp[3].value);
 	window.localStorage.setItem("whit-color", inp[3].value);
 });
+//Set Alt Color
+if (window.localStorage.getItem("Alt-color")) {
+	document.documentElement.style.setProperty(
+		"--main-color-alt",
+		window.localStorage.getItem("Alt-color"),
+	);
+	inp[4].value = window.localStorage.getItem("Alt-color");
+}
+inp[4].addEventListener("change", () => {
+	document.documentElement.style.setProperty("--main-color-alt", inp[4].value);
+	window.localStorage.setItem("Alt-color", inp[4].value);
+});
 //Reset Defaulte Color Of Sit
 let btn_default = document.getElementById("default-setting");
 btn_default.addEventListener("click", () => {
@@ -234,6 +250,7 @@ btn_default.addEventListener("click", () => {
 	window.localStorage.removeItem("text-color");
 	window.localStorage.removeItem("section-color");
 	window.localStorage.removeItem("whit-color");
+	window.localStorage.removeItem("Alt-color");
 	window.location.reload();
 });
 

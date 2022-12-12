@@ -1,5 +1,42 @@
 let links = document.getElementsByTagName("li");
 let other_Links = document.querySelector(".other-links");
+
+let span_prog = document.querySelectorAll(".span-prog");
+let Our_Skills = document.querySelector("#our-skills");
+
+let awesome = document.getElementById("awesome");
+
+let scroll_button = document.querySelector(".scroll-button");
+let go_down = document.querySelector(".go-down");
+let social_box = document.querySelector(".social-share");
+
+let dark_mode = document.querySelector(".dark-mode");
+let span_dark_mode = document.querySelector(".sp-dark");
+let i_dark_mode = document.querySelector(".sp-dark-i");
+
+let main_color = document.getElementById("in1");
+let section_color = document.getElementById("in2");
+let text_color = document.getElementById("in3");
+let body_color = document.getElementById("in4");
+let Alt_color = document.getElementById("in5");
+
+let sid_bar = document.getElementById("setting");
+let sit_btn = document.getElementById("sitt_btn");
+
+let inp = document.querySelectorAll(".color input");
+
+let btn_default = document.getElementById("default-setting");
+
+let facebookBtn = document.querySelector(".facebook-share");
+let twitterBtn = document.querySelector(".twitter-share");
+let likedinBtn = document.querySelector(".linkedin-share");
+
+let sections = document.querySelectorAll("section");
+let Images = document.querySelectorAll("section img");
+let page_progres_scroll = document.querySelector(".page-progres-scroll");
+let arrow_img = document.querySelectorAll(".other-link-font.art")
+
+
 links[3].addEventListener("mouseenter", () => {
 	other_Links.style.display = "block";
 });
@@ -12,15 +49,65 @@ other_Links.addEventListener("mouseenter", () => {
 other_Links.addEventListener("mouseleave", () => {
 	other_Links.style.display = "none";
 });
-let span_prog = document.querySelectorAll(".span-prog");
-let Our_Skills = document.querySelector("#our-skills");
+
 window.addEventListener("scroll", () => {
+	//Increase Skills Progres
 	if (window.scrollY >= Our_Skills.offsetTop - 50) {
 		span_prog.forEach((e) => {
 			e.style.width = e.dataset.prog;
 		});
 	}
+	//Increse Awesome State
+	if (window.scrollY >= awesome.offsetTop - 200) {
+		let awesome_box = document.querySelectorAll(".awesome-count");
+		setTimeout(() => {
+			setInterval(() => {
+				awesome_box.forEach((e) => {
+					if (Number(e.innerHTML) < Number(e.dataset.count))
+						e.innerHTML++;
+					else {
+						clearInterval(1);
+					}
+				});
+			}, 8);
+		}, 1500);
+	}
+	//Show Scroll Up Button
+	social_box.style.display = "block";
+	if (window.scrollY <= go_down.offsetTop) {
+		scroll_button.style.display = "none";
+	} else {
+		scroll_button.style.display = "block";
+	}
+    //Scroll Progress Header
+	let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrolTop = document.documentElement.scrollTop;
+    page_progres_scroll.style.width = `${((scrolTop / height) * 100)}%`;
+	//Move Image In Section
+	sections.forEach((e) => {
+		if (window.scrollY >= e.offsetTop - 150) {
+			sections.forEach((ele) => ele.classList.remove("active-section"));
+			e.classList.add("active-section");
+			let sectionImage = document.querySelectorAll(`.active-section img`);
+			sectionImage.forEach((el) => {
+                el.style.transform = "none";
+                el.style.opacity = "1";
+			});
+			arrow_img.forEach(e => {
+				e.style.transform = "rotate(270deg)";
+			})
+		}
+	});
 });
+//Scroll Up Button Event Click
+scroll_button.addEventListener("click", () => {
+	window.scrollTo({
+		top: 0,
+		left: 0,
+		behavior: "smooth",
+	});
+});
+//Sit Time Counter Of An Event
 setInterval(() => {
 	let dayes = document.querySelector(".dayes");
 	let houres = document.querySelector(".hours");
@@ -28,10 +115,7 @@ setInterval(() => {
 	let seconds = document.querySelector(".seconds");
 	let next_year = document.querySelector(".next-year");
 	const date = new Date();
-	let month =
-		((date.getFullYear() + 1) * 12 -
-			(date.getFullYear() * 12 + (date.getMonth() + 1))) *
-		31;
+	let month =((date.getFullYear() + 1) * 12 -(date.getFullYear() * 12 + (date.getMonth() + 1))) * 31;
 	let Dayes = 30 - date.getDate();
 	let Houres = date.getHours();
 	let Minutes = date.getMinutes();
@@ -59,55 +143,28 @@ setInterval(() => {
 		seconds.innerHTML = "0" + netSeconds * -1;
 	} else seconds.innerHTML = netSeconds * -1;
 }, 1000);
-let awesome = document.getElementById("awesome");
-window.addEventListener("scroll", () => {
-	if (window.scrollY >= awesome.offsetTop - 200) {
-		let awesome_box = document.querySelectorAll(".awesome-count");
-		setTimeout(() => {
-			setInterval(() => {
-				awesome_box.forEach((e) => {
-					if (Number(e.innerHTML) < Number(e.dataset.count)) e.innerHTML++;
-					else {
-						clearInterval(1);
-					}
-				});
-			}, 8);
-		}, 1500);
-	}
-});
-let scroll_button = document.querySelector(".scroll-button");
-let go_down = document.querySelector(".go-down");
-let social_box = document.querySelector(".social-share");
-window.addEventListener("scroll", () => {
-	social_box.style.display = "block";
-	if (window.scrollY <= go_down.offsetTop) {
-		scroll_button.style.display = "none";
-	} else {
-		scroll_button.style.display = "block";
-	}
-});
+
+//Hide Social Bar
 document.onmouseover = () => {
 	setTimeout(() => {
 		social_box.style.display = "none";
 	}, 10000);
 };
-scroll_button.addEventListener("click", () => {
-	window.scrollTo({
-		top: 0,
-		left: 0,
-		behavior: "smooth",
-	});
-});
+
 //Swith Dark mode
-let dark_mode = document.querySelector(".dark-mode");
-let span_dark_mode = document.querySelector(".sp-dark");
+
 if (window.localStorage.getItem("them")) {
 	document.documentElement.setAttribute(
 		"data-them",
-		window.localStorage.getItem("them"),
+		window.localStorage.getItem("them")
 	);
 	if (window.localStorage.getItem("them") === "dark") {
 		span_dark_mode.classList.add("fa-moon");
+			main_color.value = "#ffffff";
+			section_color.value = "#302e2e";
+			text_color.value = "#d1d1d1";
+			body_color.value = "#444444";
+			Alt_color.value = "#ffffd1";
 	} else {
 		span_dark_mode.classList.add("fa-sun");
 	}
@@ -115,23 +172,11 @@ if (window.localStorage.getItem("them")) {
 document.documentElement.getAttribute("data-them") === "dark"
 	? span_dark_mode.classList.add("dark")
 	: "";
-let main_color = document.getElementById("in1");
-let section_color = document.getElementById("in2");
-let text_color = document.getElementById("in3");
-let body_color = document.getElementById("in4");
-let Alt_color = document.getElementById("in5");
 
-if (window.localStorage.getItem("them") === "dark") {
-	main_color.value = "#ffffff";
-	section_color.value = "#302e2e";
-	text_color.value = "#d1d1d1";
-	body_color.value = "#444444";
-	Alt_color.value = "#ffffd1";
-}
 
 dark_mode.addEventListener("click", () => {
 	dark_mode.classList.toggle("active");
-	span_dark_mode.classList.toggle("dark");
+	i_dark_mode.classList.toggle("dark");
 	let switched = document.documentElement.getAttribute("data-them");
 	let setAtt = switched === "light" ? "dark" : "light";
 	document.documentElement.setAttribute("data-them", setAtt);
@@ -160,8 +205,7 @@ dark_mode.addEventListener("click", () => {
 });
 
 //Show Setting Bar
-let sid_bar = document.getElementById("setting");
-let sit_btn = document.getElementById("sitt_btn");
+
 sit_btn.addEventListener("click", () => {
 	if (sid_bar.style.left === "0px") {
 		sid_bar.style.left = "-166px";
@@ -180,7 +224,7 @@ sid_bar.onmouseleave = () => {
 	}, 3000);
 };
 //Change Color of Site
-let inp = document.querySelectorAll(".color input");
+
 //Set Main Color
 if (window.localStorage.getItem("main-color")) {
 	document.documentElement.style.setProperty(
@@ -245,7 +289,7 @@ inp[4].addEventListener("change", () => {
 	window.localStorage.setItem("Alt-color", inp[4].value);
 });
 //Reset Defaulte Color Of Sit
-let btn_default = document.getElementById("default-setting");
+
 btn_default.addEventListener("click", () => {
 	window.localStorage.removeItem("main-color");
 	window.localStorage.removeItem("text-color");
@@ -257,10 +301,6 @@ btn_default.addEventListener("click", () => {
 
 //Add social Media Share Button
 
-let facebookBtn = document.querySelector(".facebook-share");
-let twitterBtn = document.querySelector(".twitter-share");
-let likedinBtn = document.querySelector(".linkedin-share");
-
 function init() {
 	let postTitle = "Hello ";
 	let postUrl = document.location.href;
@@ -270,25 +310,6 @@ function init() {
 }
 init();
 
-let sections = document.querySelectorAll("section");
-let Images = document.querySelectorAll("section img");
-let page_progres_scroll = document.querySelector(".page-progres-scroll");
-window.addEventListener("scroll",() => {
-    let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    let scrolTop = document.documentElement.scrollTop;
-    //Scroll Progress Header
-    page_progres_scroll.style.width = `${((scrolTop / height) * 100)}%`;
-	sections.forEach((e) => {
-		if (window.scrollY >= e.offsetTop - 150) {
-			sections.forEach((ele) => ele.classList.remove("active-section"));
-			e.classList.add("active-section");
-			let sectionImage = document.querySelectorAll(`.active-section img`);
-			sectionImage.forEach((el) => {
-                el.style.transform = "none";
-                el.style.opacity = "1";
-			});
-		}
-	});
-});
+
 
 

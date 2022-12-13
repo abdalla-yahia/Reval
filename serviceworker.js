@@ -1,12 +1,11 @@
-const staticAbdallaYahia = "Abdalla-v1";
+const staticReval = "Reval-v1";
 const assets =
     [
     "/",
     "/index.html",
     "/css/Reval.css",
-    "/css/normalize.css",
     "/js/main.js",
-    "/app.js",
+    "/js/app.js",
 
     "/imgs/avatar-01.png.webp",
     "/imgs/avatar-02.png.webp",
